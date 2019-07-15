@@ -1,3 +1,19 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+get_places:
+    path:   /places
+    controller: App\Controller\PlaceController::getPlacesAction
+    methods:  [GET]
+    
+get_place:
+    path:   /places/{place_id}
+    controller: App\Controller\PlaceController::getPlaceAction
+    methods:  [GET]
+    
+get_users:
+    path:   /users
+    controller: App\Controller\UserController::getUsersAction
+    methods: [GET]
+    
+get_user:
+    path: /users/{user_id}
+    controller: App\Controller\UserController::getUserAction
+    methods: [GET]
